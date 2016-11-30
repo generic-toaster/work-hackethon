@@ -1,0 +1,27 @@
+<html py:extends="master.xhtml" py:strip="True">
+    <head py:block="head" py:strip="True">
+        <title py:block="master_title">Welcome to the Awesome DND Character Generator by Generic.Toaster</title>
+    </head>
+    <body py:block="body" py:strip="True">
+        <h2>Here's all the characters you animal</h2>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Race</th>
+                <th>Class</th>
+                <th></th>
+                <th></th>
+            </tr>
+            <py:for each="charac in characters">
+                <tr>
+                <td>${charac.name}</td>
+                <td>${charac.race}</td>
+                <td>${charac.charClass}</td>
+                <td><a href="/characters/form/${charac._id}">Edit</a></td>
+                <td><a href="/characters/deleteit/${charac._id}">Delete</a></td>
+                </tr>
+            </py:for>
+        </table>
+
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<html py:strip="True">
+    <head py:block="head" py:strip="True">
+        <title py:block="master_title"></title>
+        <script src="${tg.url('/javascript/dnd.js')}" type="text/javascript" />
+    </head>
+    <body py:block="body" py:strip="True">
+        <div id = "getting_started">
+            ${form.display(values)}
+        </div>
+        <script py:if="values" type="text/javascript">
+            document.getElementById("characterform:strength:0:strength").selectedIndex = (${values['strength_val']} - 2)
+            document.getElementById("characterform:strength:0:strength_modifier").value = ${values['strength_modifier']}
+            document.getElementById("characterform:dexterity:0:dexterity").selectedIndex = (${values['dexterity_val']} - 2)
+            document.getElementById("characterform:dexterity:0:dexterity_modifier").value = ${values['dexterity_modifier']}
+            document.getElementById("characterform:constitution:0:constitution").selectedIndex = (${values['const_val']} - 2)
+            document.getElementById("characterform:constitution:0:constitution_modifier").value = ${values['const_modifier']}
+            document.getElementById("characterform:intelligence:0:intelligence").selectedIndex = (${values['intell_val']} - 2)
+            document.getElementById("characterform:intelligence:0:intelligence_modifier").value = ${values['intell_modifier']}
+            document.getElementById("characterform:wisdom:0:wisdom").selectedIndex = (${values['wisdom_val']} - 2)
+            document.getElementById("characterform:wisdom:0:wisdom_modifier").value = ${values['wisdom_modifier']}
+            document.getElementById("characterform:charisma:0:charisma").selectedIndex = (${values['charisma_val']} - 2)
+            document.getElementById("characterform:charisma:0:charisma_modifier").value = ${values['charisma_modifier']}
+        </script>
+    </body>
+</html>
