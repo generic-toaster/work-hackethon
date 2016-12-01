@@ -7,3 +7,4 @@ install:
      - python setup.py develop
      - gearbox setup-app
 services: mongodb
+script: nosetests
