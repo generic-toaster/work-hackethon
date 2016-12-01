@@ -1,2 +1,2 @@
-TurboGears2=2.3.9
-tg.devtools=2.3.9
+TurboGears2==2.3.9
+tg.devtools==2.3.9
